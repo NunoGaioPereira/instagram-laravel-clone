@@ -18,5 +18,17 @@
             <div><a href="">www.frecodecamp.org</a></div>
         </div>
     </div>
+
+    <div class="row pt-5">
+        <div class="col-4">
+            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
+        </div>
+        <div class="col-4">
+            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
+        </div>
+        <div class="col-4">
+            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
+        </div>
+    </div>
 </div>
 @endsection
