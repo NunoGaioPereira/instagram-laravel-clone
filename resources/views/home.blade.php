@@ -13,6 +13,9 @@
                 <div class="pr-3"><strong>23k</strong> followers</div>
                 <div class="pr-3"><strong>212</strong> following</div>
             </div>
+            <div class="pt-4 font-weight-bold">freeCodeCamp.org</div>
+            <div>We're a globl community full of fresh ideas. DOn't understimate us!</div>
+            <div><a href="">www.frecodecamp.org</a></div>
         </div>
     </div>
 </div>
