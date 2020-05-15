@@ -24,12 +24,19 @@ class PostsController extends Controller
         $data = request()->validate([
             // 'novalidationfield' => '',
             'caption' =>'required',
-            'image' =>['required', 'image']
-            // 'image' =>'required|image'
+            'image' =>['required', 'image'] // 'image' =>'required|image'
         ]);
+        
+        $imagePath = request('image')->store('uploads', 'public');
 
         // Only save post to authenticated user
-        auth()->user()->posts()->create($data);
+        //auth()->user()->posts()->create($data);
+        auth()->user()->posts()->create([
+            'caption' => $data['caption'],
+            'image' => $imagePath
+        ]);
+
+        return redirect('/profile/' . auth()->user()->id);
 
         // \App\Post::create($data);
 
