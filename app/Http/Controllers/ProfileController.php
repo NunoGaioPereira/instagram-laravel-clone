@@ -13,7 +13,8 @@ class ProfileController extends Controller
         // dd($user);
         // \App\User::find($user);
         // Fetch user with $user
-        $user = User::find($user);
+        // $user = User::find($user);
+        $user = User::findOrFail($user);
 
         return view('home', [
             'user' => $user  
