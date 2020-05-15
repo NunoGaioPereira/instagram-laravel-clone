@@ -6,6 +6,12 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {   
+    // All routes in this controller need authentication
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function create()
     {
         return view('posts.create'); // follow same convention as controller Posts/posts
