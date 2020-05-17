@@ -9,7 +9,7 @@
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
                 <h1>{{ $user->username }}</h1>
-                <a href="#">Add New Post</a>
+                <a href="/p/create">Add New Post</a>
             </div>
             <div class="d-flex">
                 <div class="pr-3"><strong>153</strong> posts</div>
@@ -23,15 +23,11 @@
     </div>
 
     <div class="row pt-5">
-        <div class="col-4">
-            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
-        </div>
-        <div class="col-4">
-            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
-        </div>
-        <div class="col-4">
-            <img class="w-100" src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-15/sh0.08/e35/c2.0.745.745a/s640x640/95420667_2836106886485660_1097563618110868931_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=4gQY9R-4jooAX_5OBID&oh=255719ce1be6149dfdf66795dc611130&oe=5EE81CA9" alt="">
-        </div>
+        @foreach($user->posts as $post)
+            <div class="col-4">
+                <img class="w-100" src="/storage/{{ $post->image }}">
+            </div>
+        @endforeach
     </div>
 </div>
 @endsection
