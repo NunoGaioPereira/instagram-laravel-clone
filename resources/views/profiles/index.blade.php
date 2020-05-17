@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 p-5">
-            <img src="https://instagram.flis5-1.fna.fbcdn.net/v/t51.2885-19/s150x150/83213956_3360255157381124_5752385570823208960_n.jpg?_nc_ht=instagram.flis5-1.fna.fbcdn.net&_nc_ohc=ge4mrh4zMFAAX8sQZ7e&oh=c08e7b9db5c9838c5360096a0af1ff57&oe=5EE5AAC6" alt="" class="rounded-circle">
+            <img src="/storage/{{ $user->profile->image }}" alt="" class="rounded-circle w-100">
         </div>
         <div class="col-9 pt-5">
             <div class="d-flex justify-content-between align-items-baseline">
@@ -25,7 +25,8 @@
             </div>
             <div class="pt-4 font-weight-bold">{{ $user->profile->title }}</div>
             <div>{{ $user->profile->description }}</div>
-            <div><a href="">{{ $user->profile->url ?? 'N/A' }}</a></div>
+            <!-- <div><a href="">{{ $user->profile->url ?? 'N/A' }}</a></div> -->
+            <div><a href="">{{ $user->profile->url }}</a></div>
         </div>
     </div>
 

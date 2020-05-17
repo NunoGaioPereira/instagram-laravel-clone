@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use Illuminate\Http\Request;
-use Intervention\Image\Facade\Image;
+use Intervention\Image\Facades\Image;
 
 class ProfileController extends Controller
 {
@@ -54,7 +54,7 @@ class ProfileController extends Controller
             ['image' => $imagePath]
         ));
         return redirect("/profile/{$user->id}");
-        
+
         // auth()->user()->profile->update($data);
 
         // With user exposed -> WRONG!
