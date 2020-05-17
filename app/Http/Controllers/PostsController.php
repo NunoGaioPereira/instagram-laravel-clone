@@ -51,4 +51,12 @@ class PostsController extends Controller
         // $post->caption = $data['caption'];
         // $post->save();
     }
+
+    public function show(\App\Post $post) // Route model binding to fetch post automatically
+    {
+        // return view('posts.show', [
+        //     'post' => post,
+        // ])
+        return view('posts.show', compact('post'));
+    }
 }
