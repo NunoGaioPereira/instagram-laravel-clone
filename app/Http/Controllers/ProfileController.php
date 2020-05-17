@@ -54,6 +54,7 @@ class ProfileController extends Controller
             ['image' => $imagePath]
         ));
         return redirect("/profile/{$user->id}");
+        
         // auth()->user()->profile->update($data);
 
         // With user exposed -> WRONG!
