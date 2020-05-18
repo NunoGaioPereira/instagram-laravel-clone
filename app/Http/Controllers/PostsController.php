@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Post;
+
 use Illuminate\Http\Request;
 use Intervention\Image\Facades\Image;
 
@@ -17,6 +19,16 @@ class PostsController extends Controller
     {
         return view('posts.create'); // follow same convention as controller Posts/posts
         // return view('posts/create');
+    }
+
+    public function index()
+    {
+        // Get all id's of people I am following
+        $users = auth()->user()->following()->pluck('profiles.user_id');
+        // $posts = Post::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->get();
+        $posts = Post::whereIn('user_id', $users)->latest()->get();
+
+        return view('posts.index', compact('posts'));
     }
 
     public function store()
