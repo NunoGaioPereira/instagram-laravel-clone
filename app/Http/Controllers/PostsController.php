@@ -26,7 +26,8 @@ class PostsController extends Controller
         // Get all id's of people I am following
         $users = auth()->user()->following()->pluck('profiles.user_id');
         // $posts = Post::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->get();
-        $posts = Post::whereIn('user_id', $users)->latest()->get();
+        // $posts = Post::whereIn('user_id', $users)->latest()->get();
+        $posts = Post::whereIn('user_id', $users)->latest()->paginate(5);
 
         return view('posts.index', compact('posts'));
     }
